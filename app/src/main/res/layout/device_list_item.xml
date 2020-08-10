@@ -9,11 +9,17 @@
         <variable
             name="devicemodel"
             type="com.cvs.devicecontroller.model.Device" />
+
+        <variable
+            name="deviceviewmodel"
+            type="com.cvs.devicecontroller.viewmodel.DeviceListViewModel" />
     </data>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
         app:cardUseCompatPadding="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
