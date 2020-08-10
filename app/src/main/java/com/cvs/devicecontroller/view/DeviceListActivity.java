@@ -55,12 +55,6 @@ public final class DeviceListActivity extends AppCompatActivity {
 */
     }
 
-    void showDialog(Device device) {
-        // Create the fragment and show it as a dialog.
-        DialogFragment newFragment = DeviceLocatorDialgFragment.newInstance();
-        newFragment.show(getSupportFragmentManager(), "Find Device");
-    }
-
     private void getAllDevices() {
         DeviceListViewModel.getAllDeviceList().observe(this, listDevices -> {
             deviceListAdapter.setDeviceList(listDevices);

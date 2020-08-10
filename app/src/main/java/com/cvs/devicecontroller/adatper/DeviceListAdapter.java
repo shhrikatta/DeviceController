@@ -59,7 +59,7 @@ public class DeviceListAdapter extends RecyclerView.Adapter<DeviceListAdapter.De
             @Override
             public void onClick(View view) {
                 Toast.makeText(context, "getRoot onclick", Toast.LENGTH_SHORT).show();
-                showDialog(device);
+                showDialog(holder.mDeveloperListItemBinding.getDevicemodel());
             }
         });
     }
@@ -79,7 +79,7 @@ public class DeviceListAdapter extends RecyclerView.Adapter<DeviceListAdapter.De
 
     void showDialog(Device device) {
         // Create the fragment and show it as a dialog.
-        DeviceLocatorDialgFragment newFragment = new DeviceLocatorDialgFragment();
+        DeviceLocatorDialgFragment newFragment = new DeviceLocatorDialgFragment(device, "Find Device");
         FragmentManager mfFragmentManager = ((AppCompatActivity)context).getSupportFragmentManager();
         newFragment.show(mfFragmentManager, "Find Device");
     }

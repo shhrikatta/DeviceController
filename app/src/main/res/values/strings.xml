@@ -2,4 +2,6 @@
     <string name="app_name">DeviceController</string>
     <string name="device_connected"> Connected </string>
     <string name="device_disconnected"> Disconnected </string>
+    <string name="device_id">%1$s</string>
+    <string name="dialog_connection_status">Current Status: %1$s</string>
 </resources>
